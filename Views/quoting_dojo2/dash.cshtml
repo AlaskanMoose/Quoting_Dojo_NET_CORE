@@ -1,0 +1,24 @@
+<div>
+    <h1>Welcome to Quoting Dojo</h1>
+    @{
+        foreach(var quote in ViewBag.quotes){
+              <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quote</th>
+                    <th>Created At</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>@quote["Name"]</td>
+                    <td>@quote["Content"]</td>
+                    <td>@quote["CreatedAt"]</td>
+                </tr>      
+                </tbody>
+            </table>
+        }
+    }
+    <a href="/" class="btn btn-primary" role="button">Go Back</a>
+</div>
